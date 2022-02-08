@@ -5,9 +5,58 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JavaScript Drum Kit</title>
+  <link rel="stylesheet" href="../reset.css">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <section class="drum-kit-panel">
+    <div class="drum-kit-panel__item drum-kit-key" data-key="65">
+      <kbd class="drum-kit-key__key-name">a</kbd>
+      <span class="drum-kit-key__sound-name">clap</span>
+    </div>
+    <div class="drum-kit-panel__item drum-kit-key" data-key="83">
+      <kbd class="drum-kit-key__key-name">s</kbd>
+      <span class="drum-kit-key__sound-name">hihat</span>
+    </div>
+    <div class="drum-kit-panel__item drum-kit-key" data-key="68">
+      <kbd class="drum-kit-key__key-name">d</kbd>
+      <span class="drum-kit-key__sound-name">kick</span>
+    </div>
+    <div class="drum-kit-panel__item drum-kit-key" data-key="70">
+      <kbd class="drum-kit-key__key-name">f</kbd>
+      <span class="drum-kit-key__sound-name">openhat</span>
+    </div>
+    <div class="drum-kit-panel__item drum-kit-key" data-key="71">
+      <kbd class="drum-kit-key__key-name">g</kbd>
+      <span class="drum-kit-key__sound-name">boom</span>
+    </div>
+    <div class="drum-kit-panel__item drum-kit-key" data-key="72">
+      <kbd class="drum-kit-key__key-name">h</kbd>
+      <span class="drum-kit-key__sound-name">ride</span>
+    </div>
+    <div class="drum-kit-panel__item drum-kit-key" data-key="74">
+      <kbd class="drum-kit-key__key-name">j</kbd>
+      <span class="drum-kit-key__sound-name">shake</span>
+    </div>
+    <div class="drum-kit-panel__item drum-kit-key" data-key="75">
+      <kbd class="drum-kit-key__key-name">k</kbd>
+      <span class="drum-kit-key__sound-name">tom</span>
+    </div>
+    <div class="drum-kit-panel__item drum-kit-key" data-key="76">
+      <kbd class="drum-kit-key__key-name">l</kbd>
+      <span class="drum-kit-key__sound-name">tink</span>
+    </div>
+  </section>
+
+  <audio data-key="65" src="sounds/clap.wav"></audio>
+  <audio data-key="83" src="sounds/hihat.wav"></audio>
+  <audio data-key="68" src="sounds/kick.wav"></audio>
+  <audio data-key="70" src="sounds/openhat.wav"></audio>
+  <audio data-key="71" src="sounds/boom.wav"></audio>
+  <audio data-key="72" src="sounds/ride.wav"></audio>
+  <audio data-key="74" src="sounds/snare.wav"></audio>
+  <audio data-key="75" src="sounds/tom.wav"></audio>
+  <audio data-key="76" src="sounds/tink.wav"></audio>
 
   <script src="./script.js"></script>
 </body>
