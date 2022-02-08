@@ -1,0 +1,62 @@
+:root {
+  --light-color: wheat;
+  --cosmos-color: orange;
+  --bg-color: hsla(220, 20%, 50%, .5);
+}
+
+body {
+  display: flex;
+  height: 100vh;
+
+  font-size: 14px;
+  font-family: sans-serif;
+
+  background: var(--bg-color);
+  background-image: url('./img/travis-barker.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.drum-kit-panel {
+  display: flex;
+  margin: auto;
+  align-self: center;
+
+  background-color: var(--bg-color);
+}
+
+.drum-kit-panel__item + .drum-kit-panel__item {
+  margin-left: 20px;
+}
+
+.drum-kit-key {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 10px 16px;
+  width: 100px;
+
+  text-transform: uppercase;
+  text-align: center;
+
+  background-color: var(--bg-color);
+  border: 4px solid var(--light-color);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: .07s ease-in-out;
+}
+
+.drum-kit-key_playing {
+  transform: scale(1.1);
+  box-shadow: 0 0 5px var(--cosmos-color);
+  border-color: var(--cosmos-color);
+}
+
+.drum-kit-key__key-name {
+  font-size: 40px;
+  color: var(--light-color);
+}
+
+.drum-kit-key__sound-name {
+  margin-top: 4px;
+  color: var(--cosmos-color);  
+}
