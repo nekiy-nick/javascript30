@@ -1,0 +1,70 @@
+:root {
+  --light-color: wheat;
+  --light-decorate-color: hsla(100, 40%, 70%, .8);
+  --darker-color: hsla(210, 30%, 10%, 1);
+  --dark-color: hsla(210, 30%, 20%, 1);
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--darker-color) 80%, var(--dark-color));
+  background-repeat: no-repeat;
+}
+
+.clock {
+  margin: auto;
+  width: 360px;
+  height: 360px;
+  padding: 30px;
+
+  border: 10px solid var(--light-color);
+  border-radius: 50%;
+}
+
+.clock__face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.clock__face::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+  background-color: var(--light-color);
+  transform: translate(-50%, -50%);
+}
+
+.clock__hand {
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  height: 6px;
+
+  background-color: var(--light-decorate-color);
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: transform .07s cubic-bezier(.2, 2.5, .6, 1);
+}
+
+.clock__hand_minute {
+  height: 4px;
+}
+
+.clock__hand_second {
+  height: 2px;
+}
+
+.clock__time-number {
+  color: var(--light-color);
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 30px;
+  opacity: .7;
+}
