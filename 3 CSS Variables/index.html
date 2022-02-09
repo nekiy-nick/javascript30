@@ -9,7 +9,29 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  
+  <h1 class="title">
+    update CSS variables with
+    <span class="title_decore-text">JS</span>
+  </h1>
+
+  <div class="controlls">
+    <label class="controlls__label">
+      Spacing:
+      <input class="controlls__input js-controlls__input" type="range" min="10" max="100" value="10" data-sizing="px" name="spacing">
+    </label>
+    <label class="controlls__label">
+      Blur:
+      <input class="controlls__input js-controlls__input" type="range" min="0" max="20" value="0" data-sizing="px" name="blur">
+    </label>
+
+    <label class="controlls__label">
+      Base Color
+      <input class="controlls__input controlls__input_color-picker js-controlls__input" type="color" name="decore-color" value="#552311">
+    </label>
+  </div>
+
+  <img class="main-image" src="./img/alaska.webp" alt="mountains of the Alyaska">
+
   <script src="./script.js"></script>
 </body>
 </html>
