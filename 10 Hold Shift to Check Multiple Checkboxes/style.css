@@ -1,0 +1,54 @@
+:root {
+  --decore-color: blueviolet;
+  --bg-color: hsla(190, 50%, 30%, 1);
+  --light-color: wheat;
+  --dark-color: #333;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.inbox {
+  margin: 100px auto 0;
+  max-width: max-content;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--decore-color);
+  padding-left: 12px;
+  background-color: var(--light-color);
+  transition: box-shadow .3s ease-in-out;
+}
+
+.inbox:hover, .inbox:focus-within {
+  box-shadow: 1px 1px 10px 5px var(--light-color);
+}
+
+.item {
+  display: flex;
+}
+
+.item input {
+  padding-left: 10px;
+  border: 1px solid var(--decore-color);
+  cursor: pointer;
+}
+
+.item input:checked ~ p {
+  text-decoration: line-through;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+
+.item p {
+  width: 100%;
+  margin-left: 12px;
+  padding: 12px 20px;
+
+  font-family: sans-serif;
+  color: var(--decore-color);
+  font-size: 16px;
+
+  border-left: 1px solid var(--decore-color);
+  transition: all .3s ease-in-out;
+}
